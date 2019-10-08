@@ -1,16 +1,17 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+
+const router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res) => {
   res.send('respond with a resource');
 });
 
-router.get('/:id', function (req, res, next) {
-  console.log('ID:', req.params.id)
-  next()
-}, function (req, res, next) {
-  res.send(`User ID: ${req.params.id}`)
-})
+router.get('/:id', (req, res, next) => {
+  console.log('ID:', req.params.id); // eslint-disable-line no-console
+  next();
+}, (req, res) => {
+  res.json({ 'User ID': req.params.id });
+});
 
 module.exports = router;

@@ -1,3 +1,4 @@
 x Enable debugging with breakpoints
+x Add EsLint
 
-- Add EsLint
+- Add /crags endpoint
