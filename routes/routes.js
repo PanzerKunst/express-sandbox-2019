@@ -8,14 +8,24 @@ const corsOptions = cors({ origin: 'http://localhost:3000' });
 const items = [
   {
     id: 0,
-    name: 'Örnberget',
-    latitude: 1,
-    longitude: 1
+    name: 'Sator',
+    grade: '8a',
+    cragId: 0
   }, {
     id: 1,
-    name: 'Flaten',
-    latitude: 1,
-    longitude: 1
+    name: 'I\'ll Be Back',
+    grade: '8a',
+    cragId: 0
+  }, {
+    id: 2,
+    name: 'Panta Rei',
+    grade: '7a',
+    cragId: 0
+  }, {
+    id: 3,
+    name: 'Baretta',
+    grade: '8a',
+    cragId: 1
   }
 ];
 
@@ -28,7 +38,7 @@ router.options('*', corsOptions, (req, res) => { // enable pre-flight request fo
   res.end();
 });
 
-let currentMaxId = 1;
+let currentMaxId = 3;
 
 router.post('/', corsOptions, (req, res) => {
   currentMaxId += 1;
