@@ -52,7 +52,7 @@ router.post('/', corsOptions, (req, res) => {
 });
 
 router.delete('/:id', corsOptions, (req, res) => {
-  _.remove(items, (c) => c.id === Number(req.params.id));
+  _.remove(items, c => c.id === Number(req.params.id));
   res.status(204).end();
 });
 

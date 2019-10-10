@@ -15,6 +15,7 @@ module.exports = {
     ecmaVersion: 2018,
   },
   rules: {
+    'arrow-parens': ["error", "as-needed"],
     'comma-dangle': ["error", "never"]
   },
 };
