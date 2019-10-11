@@ -56,4 +56,9 @@ router.delete('/:id', corsOptions, (req, res) => {
   res.status(204).end();
 });
 
+router.delete('/', corsOptions, (req, res) => {
+  _.remove(items, c => c.cragId === Number(req.query.cragId));
+  res.status(204).end();
+});
+
 module.exports = router;
